@@ -17,7 +17,6 @@ export class CalculatorComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   input1: number = 1;
-  result!: number;
   base1: string = "RUB";
   base2: string = "USD";
   coursesObj:any;
@@ -48,7 +47,7 @@ export class CalculatorComponent implements OnInit {
   }
 
   convertMath(){
-    this.result = parseFloat((this.input1 * (this.coursesObj[this.base1].Value / this.coursesObj[this.base2].Value)).toFixed(6)); 
+    return parseFloat((this.input1 * (this.coursesObj[this.base1].Value / this.coursesObj[this.base2].Value)).toFixed(6)); 
   }
 
   changeValute(){
