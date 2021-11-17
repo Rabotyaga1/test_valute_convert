@@ -1,0 +1,30 @@
+.courses{
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+.course__text{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 30px;
+}
+.course__select{
+    width: 214px;
+    height: 47px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    padding-left: 10px;
+    margin-bottom: 50px;
+}
+.course__select:focus{
+    overflow: unset;
+}
+.course__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px
+}

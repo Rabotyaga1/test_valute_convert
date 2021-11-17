@@ -1,0 +1,13 @@
+<div class="course-card">
+    <span class="valute__short">{{course.CharCode}}</span>
+    <span class="valute__name">{{course.Name}}</span>
+    <div class="valute__course">
+        <div class="course__now">
+            <span class="course__price">{{valueRound()}}</span>
+            <span class="course__arrow-up" *ngIf="growCounter() < 0">▲</span>
+            <span class="course__line" *ngIf="growCounter() == 0">~</span>
+            <span class="course__arrow-down" *ngIf="growCounter() > 0">▼</span>
+        </div>
+        <span class="grow__text" [ngStyle]="{'color': growCounter() < 0 ? '#3AB146' : '#D24545'}">{{growCounter()}}</span>
+      </div>
+  </div>

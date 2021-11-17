@@ -1,0 +1,11 @@
+<div class="courses">
+    <div class="select__wrapper">
+        <span class="course__text">Базовая валюта</span>
+        <select class="course__select" (ngModelChange)="getCourses()" [(ngModel)]="base">
+            <option *ngFor="let course of coursesObj | keyvalue" [value]="course.key"> {{course.key}}</option>
+        </select>
+    </div>
+    <div class="course__wrapper">
+        <app-courses-card *ngFor="let course of coursesObj | keyvalue" [course]="course.value | json" [base]="base"></app-courses-card>
+    </div>
+</div>
