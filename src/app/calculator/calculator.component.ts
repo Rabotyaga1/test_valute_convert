@@ -47,7 +47,7 @@ export class CalculatorComponent implements OnInit {
   }
 
   convertMath(){
-    return parseFloat((this.input1 * (this.coursesObj[this.base1].Value / this.coursesObj[this.base2].Value)).toFixed(6)); 
+    return parseFloat((this.input1 * ((this.coursesObj[this.base1].Value / this.coursesObj[this.base1].Nominal) / (this.coursesObj[this.base2].Value / this.coursesObj[this.base2].Nominal))).toFixed(6)); 
   }
 
   changeValute(){
