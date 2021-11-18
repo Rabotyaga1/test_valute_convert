@@ -54,7 +54,8 @@ input::-webkit-inner-spin-button {
 }
 .course{
     height: 100px;
-    width: 320px;
+    position: absolute;
+    max-width: 800px;
     min-width: 320px;
     display: flex;
     flex-direction: column;
@@ -72,7 +73,6 @@ input::-webkit-inner-spin-button {
     color: black;
     font-size: 18px;
     font-weight: 400;
-    width: 100px;
 }
 .changerButton{
     width: 60px;

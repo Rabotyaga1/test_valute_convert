@@ -21,10 +21,6 @@ export class CalculatorComponent implements OnInit {
   base2: string = "USD";
   coursesObj:any;
 
-  ngOnInit(): void {
-    this.getCourses();
-  }
-
   getCourses(){
     this.http.get<Courses[]>(`https://www.cbr-xml-daily.ru/daily_json.js`)
     .subscribe((res)=>{
@@ -44,6 +40,10 @@ export class CalculatorComponent implements OnInit {
       this.coursesObj = Object.assign({}, ruble, this.coursesObj);
       this.convertMath();
     });
+  }
+
+  ngOnInit(): void {
+    this.getCourses();
   }
 
   convertMath(){
