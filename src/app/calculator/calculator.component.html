@@ -3,12 +3,12 @@
         <div class="converter__input">
             <input (ngModelChange)="convertMath()" [(ngModel)]="input1" type="number" class="number-field">
             <select (ngModelChange)="getCourses()" [(ngModel)]="base1" name="" id="" class="valute__select">
-                <option *ngFor="let baseValute of coursesObj | keyvalue" [ngValue]="baseValute.key">{{baseValute.key}}</option>
+                <option *ngFor="let baseValute of coursesObj | keyvalue" [ngValue]="baseValute.key">{{baseValute.key}} - {{valueParse(baseValute.value | json)}}</option>
             </select>
         </div>
         <input class="changerButton" value="⇋" type="button" (click)="changeValute()">
         <select (ngModelChange)="getCourses()" [(ngModel)]="base2" name="" id="" class="valute__select second-select">
-            <option *ngFor="let baseValute of coursesObj | keyvalue" [ngValue]="baseValute.key">{{baseValute.key}}</option>
+            <option *ngFor="let baseValute of coursesObj | keyvalue" [ngValue]="baseValute.key">{{baseValute.key}} - {{valueParse(baseValute.value | json)}}</option>
         </select>
     </div>
     <div class="course">

@@ -64,9 +64,13 @@ export class CoursesComponent implements OnInit {
     currencies[key].Previous /= currencies[key].Nominal;
   }
 
+  valueParse(value:any){
+    let valuteName:any = JSON.parse(value);
+    return valuteName.Name;
+  }
+
   ngOnInit(): void {
     this.getCourses();
-    console.log(this.coursesObj);
   }
 
 }

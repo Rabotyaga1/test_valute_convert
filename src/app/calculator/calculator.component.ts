@@ -56,4 +56,9 @@ export class CalculatorComponent implements OnInit {
     this.base2 = buffer;
     this.getCourses()
   }
+
+  valueParse(value:any){
+    let valuteName:any = JSON.parse(value);
+    return valuteName.Name;
+  }
 }
